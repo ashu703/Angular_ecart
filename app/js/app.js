@@ -4,15 +4,15 @@ var storeApp = angular.module('AngularStore', []).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
       when('/store', {
-        templateUrl: 'partials/store.htm',
+        templateUrl: 'partials/store.html',
         controller: storeController
       }).
       when('/products/:productSku', {
-        templateUrl: 'partials/product.htm',
+        templateUrl: 'partials/product.html',
         controller: storeController
       }).
       when('/cart', {
-        templateUrl: 'partials/shoppingCart.htm',
+        templateUrl: 'partials/shoppingCart.html',
         controller: storeController
       }).
       otherwise({
