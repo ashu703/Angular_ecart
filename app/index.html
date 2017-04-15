@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="AngularStore">
+<head>
+  <title>Shopping Cart with AngularJS</title>
+
+  <!-- Bootstrap, jQuery, Angular-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+<style>
+.navbar {
+  font-family: 'Tangerine', serif;
+}
+.navbar >h1> a:hover{
+  text-decoration: none;
+
+}
+</style>
+  <!-- AngularStore app -->
+  <script src="js/product.js" type="text/javascript"></script>
+  <script src="js/store.js" type="text/javascript"></script>
+  <script src="js/shoppingCart.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+  <script src="js/controller.js" type="text/javascript"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class="navbar"style="background-color: #0e0e0e;">
+  <h1 class=" " >
+    <a href="http://localhost:63342/ecart/app/index.html#/store" style="font-size: 200%;color: #2c8d3a;">
+      <img src="img/logo.png" height="60" width="60" alt="logo"/>
+
+    Ecart-kapda
+    </a> </h1>
+  </div>
+<div class="container"">
+  <div class="row-fluid">
+    <div class="span10 offset1">
+
+      <div ng-view></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
