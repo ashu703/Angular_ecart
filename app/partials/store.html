@@ -1,31 +1,6 @@
-﻿<p class="text-info">
-</p>
+﻿
 
-<p>
-    Search: <input ng-model="search">
-</p>
-
-<table class="table table-bordered"ng-init="quantity=1;cost=2">
-    <tr class="well">
-        <td class="tdRight" colspan="4" >
-            <a href="default.htm#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
-                <i class="icon-shopping-cart" />
-                <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
-            </a>
-        </td>
-    </tr>
-
-    <tr class="well">
-        <td class="tdRight" colspan="4">
-            <a href="default.htm#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
-                <i class="icon-shopping-cart" />
-                <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
-            </a>
-        </td>
-    </tr>
-
-</table>
-<div class="row " >
+<div class="row "style="" >
     <div class="col-sm-4 flx" ng-repeat="product in store.products | orderBy:'name' | filter:search"ng-class="{red: hover}"
          ng-mouseenter="hover = true"
          ng-mouseleave="hover = false" >
@@ -33,7 +8,7 @@
         </div>
 
                 <div class="span4 ">
-            <span style="display:block;text-align: center">{{product.name}}<br>{{product.price | currency}}</span>
+            <span style="display:block;text-align: center;white-space:nowrap;width: 70%;margin: 0 auto;overflow:hidden;text-overflow: ellipsis;">{{product.name}}<br>{{product.price | currency}}</span>
         <br></div>
     <div class="span4 "style="align-items: center">
        <button class="btn btn-info" style="display:flex;align-items: center;margin: 0 auto;" >Buy {{product.price | currency}}</button>
